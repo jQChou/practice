@@ -1,0 +1,6 @@
+<hr>
+<div>
+    Name: {{$ctrl.hero.name}}<br> Location:
+    <component4 field-value="$ctrl.hero.location" field-type="text" on-update="$ctrl.update('location', value)"></component4><br>
+    <button ng-click="$ctrl.delete()">Delete</button>
+</div>

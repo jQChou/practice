@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        p .a {
+            background: #000;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+
+    <button type="button" class="btn btn-large btn-block btn-default">button</button>
+
+</body>
+<script src="./bower_components/jQuery/dist/jquery.js"></script>
+<script>
+    $('.btn').on('click', function aa() {
+        var p = $('p').html();
+        console.log($('p'));
+        $('p a').addClass('a');
+        $('p').html('<a class="a">aaa</a>');
+    })
+</script>
+
+</html>

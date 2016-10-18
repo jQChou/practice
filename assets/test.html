@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <style>
+        #face {
+            margin: 3rem;
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            border: 7px solid #000;
+            border-radius: 160px;
+            position: relative;
+        }
+
+        .eye {
+            height: 1px;
+            width: 1px;
+            background: #000;
+            border: 16px solid #000;
+            border-radius: 20px;
+            position: absolute;
+            top: 100px;
+        }
+
+        .eye#left {
+            left: 70px;
+        }
+
+        .eye#right {
+            right: 70px;
+        }
+
+        #mouth-outter {
+            width: 230px;
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            left: 35px;
+            bottom: 30px;
+        }
+
+        #face:before,
+        #face:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 105px;
+            width: 14px;
+            height: 35px;
+            background: #000;
+            border-radius: 8px;
+        }
+
+        #face:before {
+            transform: rotate(55deg);
+            left: 28px;
+        }
+
+        #face:after {
+            transform: rotate(125deg);
+            right: 28px;
+        }
+
+        #mouth {
+            width: 230px;
+            height: 260px;
+            margin-top: -180px;
+            margin-bottom: 0;
+            margin-left: -7px;
+            border: 7px solid #000;
+            border-radius: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="face">
+        <div class="eye" id="left"></div>
+        <div class="eye" id="right"></div>
+        <div id="mouth-outter">
+            <div id="mouth"></div>
+        </div>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>
